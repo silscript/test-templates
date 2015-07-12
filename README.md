@@ -1,5 +1,5 @@
 # Trivia Game
-A simple trivia game with typography related questions.
+A simple trivia game with art history related questions.
 
 ## User Stories
 As a user, I should be able to ...
