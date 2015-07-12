@@ -1,0 +1,103 @@
+@import url(http://fonts.googleapis.com/css?family=Lora:400,700,400italic);
+
+
+/* Base Format */
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lora', Georgia, serif;
+    height: 100%;
+}
+
+
+/* Font Treatments */
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 1em;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* Site Header */
+
+.site-header {
+    display: flex;
+}
+
+.site-header {
+    background-color: red;
+}
+
+.site-nav {
+    width: 100%;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    text-align: left;
+    width: 100%;
+}
+
+
+/* Site Content */
+
+.site-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    width: 60%;
+}
+
+.column-left {
+    background-color: pink;
+    flex: 0 1 auto;
+    margin-right: .5em;
+    text-align: right;
+}
+
+.column-right {
+    flex: 1 0 auto;
+}
+
+#trivia-question {
+    background-color: yellow;
+}
+
+#trivia-choices {
+    background-color: lightblue;
+    border: 1px solid black;
+    line-height: 
+}
+
+#trivia-submit {
+    background-color: orange;
+}
+
+
+/* Site Footer */
+
+.site-footer {
+    background-color: yellow;
+    text-align: center;
+}
