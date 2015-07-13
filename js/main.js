@@ -1,10 +1,10 @@
 "use strict";
 
 // Website loads all the necessary files and functions.
-document.addEventListener("DOMContentLoaded", function(){
-   console.log("Document is ready!"); 
+$(document).ready(function() {
+    console.log("Webpage is ready!");
 
-  // Create all the easy questions and ansers in an object and array.
+  // Create all the easy questions and ansers in an array and.
   var triviaQuizEasy = [{ 
                           question: "The painter Piet Mondrian belonged to the artistic school knowns as ...",
                           choices: ["Impressionism", "Post-Impression", "Realism"],
@@ -22,49 +22,61 @@ document.addEventListener("DOMContentLoaded", function(){
                           choices: ["The Seven Year's War", "The Thirty Year's War", "The War of the Spanish Succession"],
                           answer: "The Napoleonic Wars",
                         }];
-  console.log(triviaQuizEasy);
 
-  // // Create all the normal questions and ansers in an object and array.
-  // var triviaQuizNorm = {}
-  // console.log(triviaQuizNorm)
+    // Create all the normal questions and ansers in an object and array.
+    // var triviaQuizNorm = {}
+    // console.log(triviaQuizNorm)
 
-  // // Create all the hard questions and ansers in an object and array.
-  // var triviaQuizHard = {}
-  // console.log(triviaQuizHard)
+    // Create all the hard questions and ansers in an object and array.
+    // var triviaQuizHard = {}
+    // console.log(triviaQuizHard)
+
 
   // Find the "question" in the trivaQuizEasy array.
   for (var i = 0; i < triviaQuizEasy.length; i++) {
-    triviaQuizEasy[i].question
+    triviaQuizEasy[i].question;
     console.log(triviaQuizEasy[i].question);
-
-    // Add the tag and styling.
   };
+
 
   // Find the "choices" in the trivaQuizEasy array.
   for (var i = 0; i < triviaQuizEasy.length; i++) {
-    triviaQuizEasy[i].choices
     console.log(triviaQuizEasy[i].choices);
-
-    // Add the tag and styling.
   };
+    // Append an unordered list in #trivia-container.
+    $("#trivia-container").append("<ul id='trivia-choices' class='choices'></ul>");
+
+    // // Append a list into the #triva-container.
+    // $("#trivia-choices").append("<li>" + triviaQuizEasy[0].choices[0] + "</li>");
+    // $("#trivia-choices").append("<li>" + triviaQuizEasy[0].choices[1] + "</li>");
+    // $("#trivia-choices").append("<li>" + triviaQuizEasy[0].choices[2] + "</li>");
+    // Refactor this into a loop. Index of the first object and then i the contents inside of it.
+
+    for (var i = 0; i < triviaQuizEasy[0].choices.length; i++) {
+      $("#trivia-choices").append("<li>" + triviaQuizEasy[0].choices[i] + "</li>");
+      console.log(triviaQuizEasy[i].choices);
+    };
+
+ 
+    // // 
+    // $("#trivia-choices").append("<li>" + triviaQuizEasy[1].choices + "</li>");
+    // $("#trivia-choices").append("<li>" + triviaQuizEasy[2].choices + "</li>");
+
 
   // Find the "answer" in the trivaQuizEasy array.
   for (var i = 0; i < triviaQuizEasy.length; i++) {
-    triviaQuizEasy[i].answer
+    triviaQuizEasy[i].answer;
     console.log(triviaQuizEasy[i].answer);
-
-    // Add the tag and styling.
   };
-});
 
-// Create all the normal questions and ansers in an object and array.
+}); // Closes "document"
+
+
+
 
 // Define all the variables.
 // var siteContent = document.querySelector(".site-content");
 //   console.log(siteContent);
-
-// var triviaQuestions = document.getElementById("trivia-question");
-//   console.log(triviaQuestions);
 
 // var triviaChoices = document.getElementById("trivia-choices");
 //   console.log(triviaChoices);
