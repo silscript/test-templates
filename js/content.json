@@ -1,0 +1,86 @@
+{ "content" : [
+    {
+        "trivia-question": "The painter Piet Mondrian belonged to the artistic school knowns as ...",
+        "trivia-choices": ["Impressionism", "Post-Impression", "Realism"],
+        "trivia-answer": "De Stijl",
+    },
+
+    {
+        "trivia-question": "The French painter who created large-scale history portraits in the Napoleonic era was ...",
+        "trivia-choices": ["Antoine-François Callet", "François Gérard", "Jean-Antoine Gros"],
+        "trivia-answer": "Jacque-Louis David",
+    },
+
+    {
+        "trivia-question": "Franciso de Goya painted vivid wartime image of the conflict known as ...",
+        "trivia-choices": ["The Seven Year's War", "The Thirty Year's War", "The War of the Spanish Succession"],
+        "trivia-answer": "The Napoleonic Wars",
+    },
+
+    {
+        "trivia-question": "An artistic style that used images and ideas prevalent in low culture was ...",
+        "trivia-choices": ["Abstract Expressionism", "Neo-realism", "Surrealism"],
+        "trivia-answer": "Pop Art",
+    },
+
+    {
+        "trivia-question": "The Italian painter who created angular modernist portraits with solid, dark eyes was ...",
+        "trivia-choices": ["Amadeo Modigliani", "Filippo Marinetti", "Pablo Picasso", "Salvador Dali"],
+        "trivia-answer": "Amadeo Modigliani",
+    },
+
+    {
+        "trivia-question": "Who was the non-native Spanish painter whose singular work featured angular figures and thick outlines?",
+        "trivia-choices": ["Diego Valáquez", "Hans Holbein", "Titian"],
+        "trivia-answer": "El Greco",
+    },
+
+
+    {
+        "trivia-question": "Surrealism is the style most closely associated with which of the following artists?",
+        "trivia-choices": ["Amadeo Modigliani", "Henri Matisse", "Pablo Picasso"],
+        "trivia-answer": "Salvador Dali",
+    },
+
+    {
+        "trivia-question": "The artist who created the famous painting of Holy Roman Emperor Charles V on horseback was ...",
+        "trivia-choices": ["Diego Valáquez", "Hans Holbein", "Sandro Botticelli"],
+        "trivia-answer": "Titian",
+    },
+
+    {
+        "trivia-question": "The artistic device in which an object in a paiting is made to look like an object on the paiting is known as ...",
+        "trivia-choices": ["marbleizing", "photorealism", "perspective"],
+        "trivia-answer": "trompe l'oeil",
+    },
+
+    {
+        "trivia-question": "The early American painter Gilbert Stuart is most well-know for his ...",
+        "trivia-choices": ["history paintings", "landscapes", "nudes"],
+        "trivia-answer": "portraits",
+    },
+
+    {
+        "trivia-question": "All of the following artistic movements were begun in the twentieth century except ...",
+        "trivia-choices": ["Abstract Expressionism", "Cubism", "Pop Art"],
+        "trivia-answer": "Impressionism",
+    },
+
+        {
+        "trivia-question": "All the following artist were Abstract Expressionists except ...",
+        "trivia-choices": ["Jackson Pollack", "Wassily Kandinsky", "Willem de Kooning"],
+        "trivia-answer": "Andy Warhol",
+    },
+
+    {
+        "trivia-question": "The Impressionist painter who was particularly known for his still lifes was ...",
+        "trivia-choices": ["Claude Monet", "Édourad Manet", "Pierre-August Renoir"],
+        "trivia-answer": "Paul Cézanne",
+    },
+
+    {
+        "trivia-question": "The Florentine noble family whose members were patrons of artists like Michelangelo, Leonardo da Vinci, and Botticelli were the ...",
+        "trivia-choices": ["Borgias", "Habsburgs", "Machiavellis"],
+        "trivia-answer": "Medicis",
+    }    
+]}
