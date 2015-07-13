@@ -3,20 +3,35 @@ console.log("Website is ready.");
 
 // Define all the variables.
 var siteContent = document.querySelector(".site-content");
-    console.log(siteContent);
+  console.log(siteContent);
 
 var triviaQuestions = document.getElementById("trivia-question");
-    console.log(triviaQuestions);
+  console.log(triviaQuestions);
 
 var triviaChoices = document.getElementById("trivia-choices");
-    console.log(triviaChoices);
+  console.log(triviaChoices);
 
 var triviaScore = document.getElementById("trivia-score");
-    console.log(triviaScore);
+  console.log(triviaScore);
 
 var buttonSubmit = document.getElementById("trivia-submit");
-    console.log(buttonSubmit);
+  console.log(buttonSubmit);
 
-// Create an json file of the questions, answer choices, and correct answers.
-// Load the json information into a variable.
-// var jsonData = require('./questions.json');
+// Create all the questions and ansers in an object and array.
+var triviaQuiz = [{ "trivia-question": "The painter Piet Mondrian belonged to the artistic school knowns as ...",
+                    "trivia-choices": ["Impressionism", "Post-Impression", "Realism"],
+                    "trivia-answer": "De Stijl",
+                  },
+
+                  {
+                    "trivia-question": "The French painter who created large-scale history portraits in the Napoleonic era was ...",
+                    "trivia-choices": ["Antoine-François Callet", "François Gérard", "Jean-Antoine Gros"],
+                    "trivia-answer": "Jacque-Louis David",
+                  },
+
+                  {
+                    "trivia-question": "Franciso de Goya painted vivid wartime image of the conflict known as ...",
+                    "trivia-choices": ["The Seven Year's War", "The Thirty Year's War", "The War of the Spanish Succession"],
+                    "trivia-answer": "The Napoleonic Wars",
+                  }];
+  console.log(triviaQuiz);
