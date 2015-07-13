@@ -4,7 +4,7 @@
 $(document).ready(function() {
     console.log("Webpage is ready!");
 
-  // Create all the easy questions and ansers in an array and.
+  // Create all the easy questions and answers in an array and.
   var triviaQuizEasy = [{ 
                           question: "The painter Piet Mondrian belonged to the artistic school knowns as ...",
                           choices: ["Impressionism", "Post-Impression", "Realism"],
@@ -23,76 +23,63 @@ $(document).ready(function() {
                           answer: "The Napoleonic Wars",
                         }];
 
-  // Create separate divs for each questions.
+  // Create individual <div> to each object.
   for (var i = 0; i < triviaQuizEasy.length; i++) {
-    // Append inside the column-right to make separate divs.
-    $(".column-right").append("<div class='trivia-container'>" + triviaQuizEasy[i] + "</div>");
-    console.log(triviaQuizEasy)
+
+    // Append the individual divs in the "column-right" div.
+    $(".column-right").append("<div class='trivia-container'>" + triviaQuizEasy + "</div>");
+      console.log(triviaQuizEasy);
   };
 
 
-    // Create all the normal questions and ansers in an object and array.
-    // var triviaQuizNorm = {}
-    // console.log(triviaQuizNorm)
+  // Create all the normal questions and answers in an object of the array.
+  // var triviaQuizNorm = {}
+  // console.log(triviaQuizNorm)
 
-    // Create all the hard questions and ansers in an object and array.
-    // var triviaQuizHard = {}
-    // console.log(triviaQuizHard)
+  // Create all the hard questions and answers in an object of the array.
+  // var triviaQuizHard = {}
+  // console.log(triviaQuizHard)
 
 
-  // Find the "question" in the trivaQuizEasy array.
+  // Locate the "question" in the object of the array.
   for (var i = 0; i < triviaQuizEasy.length; i++) {
     console.log(triviaQuizEasy[i].question);
   };
-    // Append a h2 in the trivaQuizEasy array.
-
-    // Append the first question to the first div.
+    // Append a <h2> to each "question".
     $(".trivia-container").eq(0).append("<h2 id='trivia-question'>" + triviaQuizEasy[0].question + "</h2>");
     $(".trivia-container").eq(1).append("<h2 id='trivia-question'>" + triviaQuizEasy[1].question + "</h2>");
     $(".trivia-container").eq(2).append("<h2 id='trivia-question'>" + triviaQuizEasy[2].question + "</h2>");
-    // Create a loop later on to do the same thing for the other questions
 
-  // Find the "choices" in the trivaQuizEasy array.
+
+  // Locate the "choices" in the object of the array.
   for (var i = 0; i < triviaQuizEasy.length; i++) {
     console.log(triviaQuizEasy[i].choices);
   };
-    // Don't place these in the for loop because it will make a lot of repeats.
-    // Append an unordered list in #trivia-container.
-    $(".trivia-container").eq(0).append("<ul id='trivia-choices' class='choices'>" + triviaQuizEasy[0].choices + "</ul>");
-    $(".trivia-container").eq(1).append("<ul id='trivia-choices' class='choices'>" + triviaQuizEasy[1].choices + "</ul>");
+    // Append a <ul> to in the "trivia-container" div.
+    $(".trivia-container").eq(0).append("<ul class='trivia-choices'>" + "</ul>");
+    $(".trivia-container").eq(1).append("<ul class='trivia-choices'>" + "</ul>");
+    $(".trivia-container").eq(2).append("<ul class='trivia-choices'>" + "</ul>");
 
-    // // Append a list into the #triva-container.
-    // $("#trivia-choices").append("<li>" + triviaQuizEasy[0].choices[0] + "</li>");
-    // $("#trivia-choices").append("<li>" + triviaQuizEasy[0].choices[1] + "</li>");
-    // $("#trivia-choices").append("<li>" + triviaQuizEasy[0].choices[2] + "</li>");
-    // Refactor this into a loop. Index of the first object and then i for the contents inside of it.
-
-    for (var i = 0; i < triviaQuizEasy[0].choices.length; i++) {
-      $("#trivia-choices").eq(0).append("<li type='button'>" + triviaQuizEasy[0].choices[i] + "</li>");
-      console.log(triviaQuizEasy[i].choices);
-    };
-
-    for (var i = 0; i < triviaQuizEasy[1].choices.length; i++) {
-      $("#trivia-choices").eq(1).append("<li type='button'>" + triviaQuizEasy[1].choices[i] + "</li>");
-      console.log(triviaQuizEasy[i].choices);
-    };
+    // Append a <li> to in the "trivia-choices" unordered list.
+    $(".trivia-choices").eq(0).append("<li type='button'>" + triviaQuizEasy[0].choices[0] + "</li>");
+    $(".trivia-choices").eq(0).append("<li type='button'>" + triviaQuizEasy[0].choices[1] + "</li>");
+    $(".trivia-choices").eq(0).append("<li type='button'>" + triviaQuizEasy[0].choices[2] + "</li>");
+    $(".trivia-choices").eq(1).append("<li type='button'>" + triviaQuizEasy[1].choices[0] + "</li>");
+    $(".trivia-choices").eq(1).append("<li type='button'>" + triviaQuizEasy[1].choices[1] + "</li>");
+    $(".trivia-choices").eq(1).append("<li type='button'>" + triviaQuizEasy[1].choices[2] + "</li>");
+    $(".trivia-choices").eq(2).append("<li type='button'>" + triviaQuizEasy[2].choices[0] + "</li>");
+    $(".trivia-choices").eq(2).append("<li type='button'>" + triviaQuizEasy[2].choices[1] + "</li>");
+    $(".trivia-choices").eq(2).append("<li type='button'>" + triviaQuizEasy[2].choices[2] + "</li>");    
+    // Refactor in a loop.
 
 
-
-
-    // Repeat the for loop above for every question or create a function that will do everything. You can do it!
-
-
-  // // Find the "answer" in the trivaQuizEasy array.
-  // for (var i = 0; i < triviaQuizEasy.length; i++) {
-  //   triviaQuizEasy[i].answer;
-  //   console.log(triviaQuizEasy[i].answer);
-  // };
+  // Find the "answer" in the trivaQuizEasy array.
+  for (var i = 0; i < triviaQuizEasy.length; i++) {
+    triviaQuizEasy[i].answer;
+    console.log(triviaQuizEasy[i].answer);
+  };
 
 }); // Closes "document"
-
-
-
 
 // Define all the variables.
 // var siteContent = document.querySelector(".site-content");
