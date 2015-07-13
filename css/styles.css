@@ -81,8 +81,18 @@ ul {
   flex: 1 1 auto;
 }
 
-.questions {
-  background-color: 
+.trivia-container {
+  border: 1px solid black;
+  margin-bottom: 1em;
+}
+
+.question {
+  background-color: purple;
+}
+
+.column-right h2 {
+  background-color: purple;
+  margin-top: 1em;
 }
 
 .choices li {
