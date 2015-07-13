@@ -70,28 +70,27 @@ ul {
 }
 
 .column-left {
-  background-color: pink;
-  flex: 0 1 auto;
+  background-color: blue;
+  flex: 0 0 auto;
   margin-right: .5em;
   text-align: right;
 }
 
 .column-right {
-  flex: 1 0 auto;
-}
-
-#trivia-question {
-  background-color: yellow;
-}
-
-#trivia-choices {
-  background-color: lightblue;
-  border: 1px solid black;
-  line-height: 
-}
-
-#trivia-submit {
   background-color: orange;
+  flex: 1 1 auto;
+}
+
+.questions {
+  background-color: 
+}
+
+.choices li {
+  background-color: green;
+  border: 1px solid black;
+  line-height: 2em;
+  margin-bottom: 1em;
+  margin-top: 1em;
 }
 
 
