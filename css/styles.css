@@ -82,7 +82,7 @@ ul {
 }
 
 .trivia-container {
-  border: 1px solid black;
+  border: 1px solid red;
   margin-bottom: 1em;
 }
 
@@ -95,7 +95,7 @@ ul {
   margin-top: 1em;
 }
 
-.choices li {
+.trivia-choices li {
   background-color: green;
   border: 1px solid black;
   line-height: 2em;
