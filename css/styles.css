@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Lora:400,700,400italic);
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500' rel='stylesheet' type='text/css'>
 
 
 /* Base Format */
@@ -9,13 +9,13 @@ html {
 }
 
 *, *:before, *:after {
-  box-sizing: inherit;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
   height: 100%;
 }
 
@@ -26,87 +26,185 @@ a {
   text-decoration: none;
 }
 
-h1 {
-  font-size: 1em;
-}
-
 ul {
   list-style: none;
 }
 
 
-/* Site Header */
-
-.site-header {
+/* Site Container */
+/*.site-container {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+  min-height: 100vh;
+  padding-bottom: 4em;
+}
+*/
+
+
+.trivia-container {
+  background-color: orange;
+  border: 1px solid red;
+  margin-bottom: 20px;
 }
 
-.site-header {
+.content-left {
   background-color: red;
+  border-right: 2px solid #000;
+  flex: 0 0 auto;
+  font-size: .9em;
+  font-weight: 700;
+  line-height: 1.5em;
+  padding: 1.5em 1em 1.5em 1em;
+  text-align: right;
 }
 
-.site-nav {
-  width: 100%;
+.content-right {
+  flex: 1 1 auto;
+}
+
+/* Site Header */
+/*
+.site-header {
+  margin: 0 auto;
 }
 
 .nav-list {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  font-size: .7em;
+  font-weight: 700;
   justify-content: space-between;
-  text-align: left;
-  width: 100%;
+  line-height: 3em;
 }
-
+*/
 
 /* Site Content */
-
+/*
 .site-content {
+  background-color: #FFF;
+  border: 2px solid #000;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   margin: 0 auto;
-  width: 60%;
-}
-
-.column-left {
-  background-color: blue;
-  flex: 0 0 auto;
-  margin-right: .5em;
-  text-align: right;
-}
-
-.column-right {
-  background-color: orange;
-  flex: 1 1 auto;
-}
-
-.trivia-container {
-  border: 1px solid red;
-  margin-bottom: 1em;
-}
-
-.question {
-  background-color: purple;
-}
-
-.column-right h2 {
-  background-color: purple;
-  margin-top: 1em;
-}
-
-.trivia-choices li {
-  background-color: green;
-  border: 1px solid black;
-  line-height: 2em;
-  margin-bottom: 1em;
-  margin-top: 1em;
 }
 
 
-/* Site Footer */
 
-.site-footer {
-  background-color: yellow;
-  text-align: center;
+  @media (min-width: 320px) {
+    .site-content, .site-header {
+      width: 90%;
+    }
+  }
+
+  @media (min-width: 414px) {
+    .site-content, .site-header {
+      width: 80%;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .site-content, .site-header {
+      width: 50%;
+    }
+  }  
+
+  @media (min-width: 1024px) {
+    .site-content, .site-header {
+      width: 50%;
+    }
+  }
+
+  @media (min-width: 1600px) {
+    .site-content, .site-header {
+      width: 30%;
+    }
+  }    
+
+
+
+.trivia-number {
+  font-size: 1em;
+  font-weight: 700;
 }
+
+.trivia-question {
+  border-bottom: 2px solid #000;
+  font-size: .9em;
+  font-weight: 700;
+  line-height: 1.5em;
+  padding: 1.5em 1em 1.5em 1em;
+}
+
+.choice {
+  border-bottom: 2px solid #000;
+  font-size: .9em;
+  font-weight: 100;
+  line-height: 1.5em;
+  padding: 1.5em 1em 1.5em 1em;
+}
+
+.choice:hover {
+  background-color: #FF0000;
+  transition: .5s;
+}
+
+.choice:last-child {
+  border-bottom: none;
+}*/
+
+
+/* Animation */
+/*.animation {
+  animation-duration: 1s;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translate3d(2000px, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fade-in {
+  animation-name: fade-in;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(-2000px, 0, 0);
+  }
+}
+
+.fade-out {
+  animation-name: fade-out;
+}*/
+
+/*@keyframes incorrect {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+.incorrect {
+  animation-name: incorrect;
+}*/
