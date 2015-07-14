@@ -32,40 +32,18 @@ ul {
 
 
 /* Site Container */
-/*.site-container {
+
+.site-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-height: 100%;
   min-height: 100vh;
-  padding-bottom: 4em;
-}
-*/
-
-
-.trivia-container {
-  background-color: orange;
-  border: 1px solid red;
-  margin-bottom: 20px;
 }
 
-.content-left {
-  background-color: red;
-  border-right: 2px solid #000;
-  flex: 0 0 auto;
-  font-size: .9em;
-  font-weight: 700;
-  line-height: 1.5em;
-  padding: 1.5em 1em 1.5em 1em;
-  text-align: right;
-}
-
-.content-right {
-  flex: 1 1 auto;
-}
 
 /* Site Header */
-/*
+
 .site-header {
   margin: 0 auto;
 }
@@ -77,56 +55,61 @@ ul {
   justify-content: space-between;
   line-height: 3em;
 }
-*/
+
 
 /* Site Content */
-/*
-.site-content {
-  background-color: #FFF;
+
+.trivia-container {
   border: 2px solid #000;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  margin: 0 auto;
+  margin: 0 auto 1em auto;
 }
 
-
-
   @media (min-width: 320px) {
-    .site-content, .site-header {
+    .site-header, .trivia-container {
       width: 90%;
     }
   }
 
   @media (min-width: 414px) {
-    .site-content, .site-header {
+    .site-header, .trivia-container {
       width: 80%;
     }
   }
 
   @media (min-width: 768px) {
-    .site-content, .site-header {
+    .site-header, .trivia-container {
       width: 50%;
     }
   }  
 
   @media (min-width: 1024px) {
-    .site-content, .site-header {
+    .site-header, .trivia-container {
       width: 50%;
     }
   }
 
   @media (min-width: 1600px) {
-    .site-content, .site-header {
+    .site-header, .trivia-container {
       width: 30%;
     }
-  }    
+  }
 
-
-
-.trivia-number {
-  font-size: 1em;
+.content-left {
+  border-right: 2px solid #000;
+  flex: 0 0 auto;
+  font-size: .9em;
   font-weight: 700;
+  line-height: 1.5em;
+  padding: 1.5em 1em 1.5em 1em;
+  text-align: right;
+}
+
+.content-right {
+  flex: 1 1 auto;
+  text-align: left;
 }
 
 .trivia-question {
@@ -135,6 +118,11 @@ ul {
   font-weight: 700;
   line-height: 1.5em;
   padding: 1.5em 1em 1.5em 1em;
+}
+
+.trivia-score {
+  font-size: 1em;
+  font-weight: 700;
 }
 
 .choice {
@@ -152,11 +140,12 @@ ul {
 
 .choice:last-child {
   border-bottom: none;
-}*/
+}
 
 
-/* Animation */
-/*.animation {
+/* Site Animation */
+
+.animation {
   animation-duration: 1s;
 }
 
@@ -189,9 +178,9 @@ ul {
 
 .fade-out {
   animation-name: fade-out;
-}*/
+}
 
-/*@keyframes incorrect {
+@keyframes incorrect {
   0%, 100% {
     transform: translate3d(0, 0, 0);
   }
@@ -207,4 +196,6 @@ ul {
 
 .incorrect {
   animation-name: incorrect;
-}*/
+}
+
+
