@@ -51,6 +51,7 @@ $(document).ready(function() {
   $(".choice").click(function() {
     console.log("this =", this);
 
+
     // Match answers to the individual <li> tags.
     var choice = $(this).text();
     console.log(choice);
@@ -60,7 +61,12 @@ $(document).ready(function() {
 
       // If the answer is correct ...
       if (correctAnswers[i] === choice) {
-        alert("You are correct!");
+        // Append the "correct" class.
+
+        // Add 1 point to each correct answer.
+        $("#trivia-score").html(function(i, val) {
+          return val * 1 + 1;
+        });
       };
     };
 
