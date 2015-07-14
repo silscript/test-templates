@@ -23,12 +23,13 @@ $(document).ready(function() {
   // Create individual <div> to each object.
   for (var i = 0; i < triviaQuizEasy.length; i++) {
 
-    // Append the individual divs in the "column-right" div.
-    $(".site-container").append("<div class='trivia-container'>" + "<div class='content-left'></div>" + "<div class='content-right'><h2>" + triviaQuizEasy[i]["question"] + "</h2></div></div>");
+    // Append the individual divs in the "site-container" div.
+    // Append the divs in the "site-container" divs.
+    $(".site-container").append("<div class='trivia-container'>" + "<div class='content-left'><h2>##</h2></div>" + "<div class='content-right'><h2 class='trivia-question'>" + triviaQuizEasy[i]["question"] + "</h2></div></div>");
       console.log("<div> Have been appended.")
 
     // Create individual <ul> and append them to each object.
-    $(".trivia-container").eq(i).append("<ul class='trivia-choices'>" + "</ul>");
+    $(".content-right").eq(i).append("<ul class='trivia-choices'>" + "</ul>");
       console.log("<ul> Have been appended.")
 
     // Locate the "choices" key in the object of the array. 
@@ -44,34 +45,34 @@ $(document).ready(function() {
   }; // Closes "triviaQuizEasy.length"
 
   // Create an array of all the correct answers.
-  // var correctAnswers = ["De Stijl", "Jacque-Louis David", "The Napoleonic Wars"];
-  // console.log(correctAnswers);
+  var correctAnswers = ["De Stijl", "Jacque-Louis David", "The Napoleonic Wars"];
+  console.log(correctAnswers);
 
-  // // Add an event listener to all <li> tags.
-  // $(".choice").click(function() {
-  //   console.log("this =", this);
+  // Add an event listener to all <li> tags.
+  $(".choice").click(function() {
+    console.log("this =", this);
 
 
-  //   // Match answers to the individual <li> tags.
-  //   var userChoice = $(this).text();
-  //   console.log(userChoice);
+    // Match answers to the individual <li> tags.
+    var userChoice = $(this).text();
+    console.log(userChoice);
 
-  //   // Loop through all the answers in the "correctAnswers" array.
-  //   for (var i = 0; i < correctAnswers.length; i++) {
+    // Loop through all the answers in the "correctAnswers" array.
+    for (var i = 0; i < correctAnswers.length; i++) {
 
-  //     // If the answer is correct ...
-  //     if (correctAnswers[i] === userChoice) {
-  //       // Append the "correct" class.
+      // If the answer is correct ...
+      if (correctAnswers[i] === userChoice) {
+        // Append the "correct" class.
 
-  //       // Add 1 point to each correct answer.
-  //       $("#trivia-score").html(function(i, val) {
-  //         return val * 1 + 1;
-  //       });
-  //     };
-  //   };
+        // Add 1 point to each correct answer.
+        $(".trivia-score").html(function(i, val) {
+          return val * 1 + 1;
+        });
+      };
+    };
 
-  //   console.log("User has chosen.");
-  // });
+    console.log("User has chosen.");
+  });
 
 
 
