@@ -52,8 +52,24 @@ ul {
   display: flex;
   font-size: .7em;
   font-weight: 700;
-  justify-content: space-between;
   line-height: 3em;
+}
+
+.nav-list li:nth-child(1) {
+  flex: 1 0 auto;
+  text-align: left;
+}
+
+.nav-list li:nth-child(2) {
+  background-color: orange;
+  flex: 3 0 auto;
+  text-align: right;
+}
+
+.nav-list li:nth-child(3) {
+  background-color: red;
+  flex: 0 1 auto;
+  text-align: right;
 }
 
 
@@ -87,7 +103,7 @@ ul {
 
   @media (min-width: 1024px) {
     .site-header, .trivia-container {
-      width: 50%;
+      width: 40%;
     }
   }
 
@@ -110,6 +126,12 @@ ul {
 .content-right {
   flex: 1 1 auto;
   text-align: left;
+}
+
+.trivia-number {
+  font-size: .9em;
+  font-weight: 700;
+  text-align: right;
 }
 
 .trivia-question {
