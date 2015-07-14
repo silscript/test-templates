@@ -2,7 +2,7 @@
 
 // Website loads all the necessary files and functions.
 $(document).ready(function() {
-    console.log("Webpage is ready!");
+  console.log("Webpage is ready!");
 
   // Create all the easy questions and ansers in an array and.
   var triviaQuizEasy = [{ 
@@ -24,21 +24,49 @@ $(document).ready(function() {
   for (var i = 0; i < triviaQuizEasy.length; i++) {
 
     // Append the individual divs in the "column-right" div.
-    $(".column-right").append("<div class='trivia-container'>" + triviaQuizEasy[i]["question"] + "</div>");
+    $(".column-right").append("<div class='trivia-container'><h2>" + triviaQuizEasy[i]["question"] + "</h2></div>");
+      console.log("<div> Have been appended.")
 
     // Create individual <ul> and append them to each object.
     $(".trivia-container").eq(i).append("<ul class='trivia-choices'>" + "</ul>");
-    
+      console.log("<ul> Have been appended.")
+
     // Locate the "choices" key in the object of the array. 
-    // Use "j" instead of "i" because "i" is being used to each element group of the outer array.
+    // Use "j" instead of "i" because "i" is being used for each element group of the outer array.
     for (var j = 0; j < triviaQuizEasy[i]["choices"].length; j++) {
 
       // Create individual <li> to each object's choices key list.
-      $(".trivia-choices").eq(i).append("<li>" + triviaQuizEasy[i]["choices"][j] + "</li>");
-    } 
-    
+      $(".trivia-choices").eq(i).append("<li class='choice'>" + triviaQuizEasy[i]["choices"][j] + "</li>");
+        console.log("<li> Have been appended.")
+    };
+
     console.log(triviaQuizEasy);
   }; // Closes "triviaQuizEasy.length"
+
+  // Create an array of all the correct answers.
+  var correctAnswers = ["De Stijl", "Jacque-Louis David", "The Napoleonic Wars"];
+  console.log(correctAnswers);
+
+  // Add an event listener to all <li> tags.
+  $(".choice").click(function() {
+    console.log("this =", this);
+
+    // Match answers to the individual <li> tags.
+    var choice = $(this).text();
+    console.log(choice);
+
+    // Loop through all the answers in the "correctAnswers" array.
+    for (var i = 0; i < correctAnswers.length; i++) {
+
+      // If the answer is correct ...
+      if (correctAnswers[i] === choice) {
+        alert("You are correct!");
+      };
+    };
+
+    console.log("User has chosen.");
+  });
+
 
 
   // Create all the normal questions and answers in an object of the array.
