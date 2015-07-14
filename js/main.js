@@ -25,7 +25,7 @@ $(document).ready(function() {
 
     // Append the individual divs in the "site-container" div.
     // Append the divs in the "site-container" divs.
-    $(".site-container").append("<div class='trivia-container'>" + "<div class='content-left'><h2>##</h2></div>" + "<div class='content-right'><h2 class='trivia-question'>" + triviaQuizEasy[i]["question"] + "</h2></div></div>");
+    $(".site-container").append("<div class='trivia-container'>" + "<div class='content-left'><h2 class='trivia-number'>##</h2></div>" + "<div class='content-right'><h2 class='trivia-question'>" + triviaQuizEasy[i]["question"] + "</h2></div></div>");
       console.log("<div> Have been appended.")
 
     // Create individual <ul> and append them to each object.
