@@ -44,6 +44,10 @@ $(document).ready(function() {
     console.log(triviaQuizEasy);
   }; // Closes "triviaQuizEasy.length"
 
+  // Append the score value.
+  $(".nav-list").append("<li id='trivia-score'></li>");
+  console.log("<li> Have been appended.")
+
   // Create an array of all the correct answers.
   var correctAnswers = ["De Stijl", "Jacque-Louis David", "The Napoleonic Wars"];
   console.log(correctAnswers);
@@ -51,7 +55,6 @@ $(document).ready(function() {
   // Add an event listener to all <li> tags.
   $(".choice").click(function() {
     console.log("this =", this);
-
 
     // Match answers to the individual <li> tags.
     var userChoice = $(this).text();
@@ -65,11 +68,21 @@ $(document).ready(function() {
         // Append the "correct" class.
 
         // Add 1 point to each correct answer.
-        $(".trivia-score").html(function(i, val) {
+        $("#trivia-score").html(function(i, val) {
           return val * 1 + 1;
         });
       };
     };
+
+    // Slide the answered trivia question towards the left.
+      // Remove the animation class.
+      // Add hide question.
+
+    // Slide the next trivia question from the right.
+      // Remove hide class.
+      // Add the animation class.
+    
+    // Repeat steps until all questions are answered.
 
     console.log("User has chosen.");
   });
