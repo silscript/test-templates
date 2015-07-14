@@ -24,7 +24,7 @@ $(document).ready(function() {
   for (var i = 0; i < triviaQuizEasy.length; i++) {
 
     // Append the individual divs in the "column-right" div.
-    $(".column-right").append("<div class='trivia-container'><h2>" + triviaQuizEasy[i]["question"] + "</h2></div>");
+    $(".site-container").append("<div class='trivia-container'>" + "<div class='content-left'></div>" + "<div class='content-right'><h2>" + triviaQuizEasy[i]["question"] + "</h2></div></div>");
       console.log("<div> Have been appended.")
 
     // Create individual <ul> and append them to each object.
@@ -44,34 +44,34 @@ $(document).ready(function() {
   }; // Closes "triviaQuizEasy.length"
 
   // Create an array of all the correct answers.
-  var correctAnswers = ["De Stijl", "Jacque-Louis David", "The Napoleonic Wars"];
-  console.log(correctAnswers);
+  // var correctAnswers = ["De Stijl", "Jacque-Louis David", "The Napoleonic Wars"];
+  // console.log(correctAnswers);
 
-  // Add an event listener to all <li> tags.
-  $(".choice").click(function() {
-    console.log("this =", this);
+  // // Add an event listener to all <li> tags.
+  // $(".choice").click(function() {
+  //   console.log("this =", this);
 
 
-    // Match answers to the individual <li> tags.
-    var choice = $(this).text();
-    console.log(choice);
+  //   // Match answers to the individual <li> tags.
+  //   var userChoice = $(this).text();
+  //   console.log(userChoice);
 
-    // Loop through all the answers in the "correctAnswers" array.
-    for (var i = 0; i < correctAnswers.length; i++) {
+  //   // Loop through all the answers in the "correctAnswers" array.
+  //   for (var i = 0; i < correctAnswers.length; i++) {
 
-      // If the answer is correct ...
-      if (correctAnswers[i] === choice) {
-        // Append the "correct" class.
+  //     // If the answer is correct ...
+  //     if (correctAnswers[i] === userChoice) {
+  //       // Append the "correct" class.
 
-        // Add 1 point to each correct answer.
-        $("#trivia-score").html(function(i, val) {
-          return val * 1 + 1;
-        });
-      };
-    };
+  //       // Add 1 point to each correct answer.
+  //       $("#trivia-score").html(function(i, val) {
+  //         return val * 1 + 1;
+  //       });
+  //     };
+  //   };
 
-    console.log("User has chosen.");
-  });
+  //   console.log("User has chosen.");
+  // });
 
 
 
