@@ -2,7 +2,7 @@
 
 // Website loads all the necessary files and functions.
 $(document).ready(function() {
-  console.log("Webpage is ready!");
+  console.log("Webpage is ready.");
 
   // Create all the easy questions and ansers in an array and.
   var triviaQuizEasy = [{ 
@@ -20,37 +20,49 @@ $(document).ready(function() {
                           choices: ["The Napoleonic Wars", "The Seven Year's War", "The Thirty Year's War", "The War of the Spanish Succession"],
                         }];
 
-  // Create individual <div> to each object.
-  for (var i = 0; i < triviaQuizEasy.length; i++) {
+  // Create all the normal questions and answers in an object of the array.
+  // var triviaQuizNorm = {}
+  // console.log(triviaQuizNorm)
 
+  // Create all the hard questions and answers in an object of the array.
+  // var triviaQuizHard = {}
+  // console.log(triviaQuizHard)
+
+  var index = 0;
+  
+  function createQuestion() {
+
+    // Create individual <div> to each object.
     // Append the individual divs in the "site-container" div.
-    // Append the divs in the "site-container" divs.
-    $(".site-container").append("<div class='trivia-container'>" + "<div class='content-left'><h2 class='trivia-number'>##</h2></div>" + "<div class='content-right'><h2 class='trivia-question'>" + triviaQuizEasy[i]["question"] + "</h2></div></div>");
-      console.log("<div> Have been appended.")
+    // Append the divs in the "site-container" div
+    $(".site-container").append("<div class='trivia-container animation fade-in'>" + "<div class='content-left'><h2 class='trivia-number'>##</h2></div>" + "<div class='content-right'><h2 class='trivia-question'>" + triviaQuizEasy[index]["question"] + "</h2></div></div>");
+      console.log("Created base.");
 
     // Create individual <ul> and append them to each object.
-    $(".content-right").eq(i).append("<ul class='trivia-choices'>" + "</ul>");
-      console.log("<ul> Have been appended.")
+    $(".content-right").append("<ul class='trivia-choices'>" + "</ul>");
+      console.log("Creatd list.");
 
     // Locate the "choices" key in the object of the array. 
     // Use "j" instead of "i" because "i" is being used for each element group of the outer array.
-    for (var j = 0; j < triviaQuizEasy[i]["choices"].length; j++) {
+    for (var j = 0; j < triviaQuizEasy[index]["choices"].length; j++) {
 
       // Create individual <li> to each object's choices key list.
-      $(".trivia-choices").eq(i).append("<li class='choice'>" + triviaQuizEasy[i]["choices"][j] + "</li>");
-        console.log("<li> Have been appended.")
-    };
+      $(".trivia-choices").append("<li class='choice'>" + triviaQuizEasy[index]["choices"][j] + "</li>");
+        console.log("Created choices.")
 
-    console.log(triviaQuizEasy);
-  }; // Closes "triviaQuizEasy.length"
+    }; // Closes "triviaQuizEasy.length"
+  }; // Closes "createQuestion"
 
-  // Append the score value.
-  $(".nav-list").append("<li id='trivia-score'></li>");
-  console.log("<li> Have been appended.")
+  createQuestion()
+  console.log("Created full question.");
+
 
   // Create an array of all the correct answers.
   var correctAnswers = ["De Stijl", "Jacque-Louis David", "The Napoleonic Wars"];
-  console.log(correctAnswers);
+
+  // Append the score value.
+  $(".nav-list").append("<li id='trivia-score'></li>");
+    console.log("Appended score.");
 
   // Add an event listener to all <li> tags.
   $(".choice").click(function() {
@@ -60,41 +72,28 @@ $(document).ready(function() {
     var userChoice = $(this).text();
     console.log(userChoice);
 
+
+
     // Loop through all the answers in the "correctAnswers" array.
     for (var i = 0; i < correctAnswers.length; i++) {
 
       // If the answer is correct ...
       if (correctAnswers[i] === userChoice) {
+        console.log("Answer is correct!");
         // Append the "correct" class.
 
         // Add 1 point to each correct answer.
         $("#trivia-score").html(function(i, val) {
           return val * 1 + 1;
-        });
-      };
-    };
+          console.log("Added 1pt.");
+        }); // Closes "trivia-score"
+      }; // Closes "if" statement
+    }; // Closes "correctAnswers" 
 
-    // Slide the answered trivia question towards the left.
-      // Remove the animation class.
-      // Add hide question.
+    // index++;
+    // $(".trivia-container").removeClass("fade-in");
+    // $(".trivia-container").addClass("fade-out").remove();
+    // createQuestion();
 
-    // Slide the next trivia question from the right.
-      // Remove hide class.
-      // Add the animation class.
-    
-    // Repeat steps until all questions are answered.
-
-    console.log("User has chosen.");
-  });
-
-
-
-  // Create all the normal questions and answers in an object of the array.
-  // var triviaQuizNorm = {}
-  // console.log(triviaQuizNorm)
-
-  // Create all the hard questions and answers in an object of the array.
-  // var triviaQuizHard = {}
-  // console.log(triviaQuizHard)
-
-}); // Closes "document"
+  }); // Closes ".click"
+}); // Closes "(document).ready"
