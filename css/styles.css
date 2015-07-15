@@ -135,7 +135,7 @@ ul {
 
   @media (min-width: 768px) {
     .site-info, .trivia-container {
-      width: 60%;
+      width: 70%;
     }
   }  
 
@@ -147,7 +147,7 @@ ul {
 
   @media (min-width: 1200px) {
     .site-info, .trivia-container {
-      width: 40%;
+      width: 45%;
     }
   }  
 
@@ -203,8 +203,17 @@ ul {
   border-bottom: none;
 }
 
+.answered {
+  opacity: .2;
+}
+
 .correct {
   color: green;
+  font-weight: 700;
+}
+
+.incorrect {
+  color: red;
   font-weight: 700;
 }
 
