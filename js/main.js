@@ -68,11 +68,12 @@ $(document).ready(function() {
   $(".choice").click(function() {
     console.log("this =", this);
 
+    $(".trivia-container").removeClass("fade-in");
+    $(".trivia-container").addClass("fade-out").remove();
+
     // Match answers to the individual <li> tags.
     var userChoice = $(this).text();
     console.log(userChoice);
-
-
 
     // Loop through all the answers in the "correctAnswers" array.
     for (var i = 0; i < correctAnswers.length; i++) {
@@ -90,10 +91,8 @@ $(document).ready(function() {
       }; // Closes "if" statement
     }; // Closes "correctAnswers" 
 
-    // index++;
-    // $(".trivia-container").removeClass("fade-in");
-    // $(".trivia-container").addClass("fade-out").remove();
-    // createQuestion();
+    index++;
+    createQuestion();
 
   }); // Closes ".click"
 }); // Closes "(document).ready"
