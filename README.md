@@ -28,5 +28,5 @@ Bonus: As a user, I should be able to ...
 
 ##Credits
 - Font-Awesome Iconography by Dave Gandy
-- Roboto Slab by Christian Robertson & GoogleFonts
+- Roboto Slab by Christian Robertson & Google Fonts
 - Questions by Varsity Tutors
