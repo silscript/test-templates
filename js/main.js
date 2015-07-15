@@ -56,13 +56,12 @@ $(document).ready(function() {
   createQuestion()
   console.log("Created full question.");
 
-
-  // Create an array of all the correct answers.
-  var correctAnswers = ["De Stijl", "Jacque-Louis David", "The Napoleonic Wars"];
-
   // Append the score value.
   $(".nav-list").append("<li id='trivia-score'></li>");
     console.log("Appended score.");
+
+  // Create an array of all the correct answers.
+  var correctAnswers = ["De Stijl", "Jacque-Louis David", "The Napoleonic Wars"];
 
   // Add an event listener to all <li> tags.
   $(".choice").click(function() {
