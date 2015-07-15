@@ -61,13 +61,12 @@ ul {
 }
 
 .nav-list li:nth-child(2) {
-  background-color: orange;
   flex: 3 0 auto;
+  padding-right: .3em;
   text-align: right;
 }
 
 .nav-list li:nth-child(3) {
-  background-color: red;
   flex: 0 1 auto;
   text-align: right;
 }
@@ -142,11 +141,6 @@ ul {
   padding: 1.5em 1em 1.5em 1em;
 }
 
-.trivia-score {
-  font-size: 1em;
-  font-weight: 700;
-}
-
 .choice {
   border-bottom: 2px solid #000;
   font-size: .9em;
@@ -219,5 +213,3 @@ ul {
 .incorrect {
   animation-name: incorrect;
 }
-
-
