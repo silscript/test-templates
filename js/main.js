@@ -113,6 +113,13 @@ $(document).ready(function() {
   $(".choice").on("click", function() {
     console.log("this =", this);
 
+    var questionContainer = $(this).closest(".trivia-container")
+
+    if (questionContainer.hasClass("answered")) {
+      return // to stop it
+    };
+    questionContainer.addClass("answered");
+
     // Match answers to the individual <li> tags.
     var userChoice = $(this).text();
     console.log(userChoice);
@@ -122,10 +129,11 @@ $(document).ready(function() {
 
       // If the answer is correct ...
       if (correctAnswers[i] === userChoice) {
+        $(this).closest(".choice").addClass("correct")
         console.log("Answer is correct!");
-        // Append the "correct" class.
+        // Append the "correct" class. use the questioncontainer
 
-        // Add 1 point to each correct answer.
+         // Add 1 point to each correct answer.
         $("#trivia-score").html(updateScore);
           updateScore = updateScore + 1;
           console.log("Added 1pt.");
