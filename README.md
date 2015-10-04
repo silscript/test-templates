@@ -13,7 +13,6 @@ Goal: As a user, I should be able to ...
 * View the site and trivia quiz on mobile applications.
 * View the site and trivia quiz on various browsers.
 
-
 Bonus: As a user, I should be able to ...
 
 * See a list of questions with the correct answers to learn where I was correct or incorrect.
